@@ -36,7 +36,9 @@
         <h1>I'm <span class="hero-highlight">Mehran Khan</span><br>Full Stack Developer</h1>
         <p class="hero-description">Building robust, scalable web applications with modern technologies. 3+ years of experience delivering high-performance solutions.</p>
         <div class="hero-buttons">
-          <a href="Mehran_Khan_CV.pdf" id="downloadCvBtn" class="btn-primary"><i class="fas fa-download"></i> Download CV</a>
+           <a href="Mehran_khan_CV.pdf" download="Mehran_Khan_CV.pdf" class="btn-primary" id="downloadCvBtn">
+            <i class="fas fa-download"></i> Download CV
+          </a>
           <a href="#projects" class="btn-outline">View Projects <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
@@ -244,7 +246,7 @@
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       // Replace this URL with your actual CV file link
-      const cvUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+      const cvUrl = 'Mehran_khan_CV.pdf';
       const link = document.createElement('a');
       link.href = cvUrl;
       link.download = 'Mehran_Khan_CV.pdf';

@@ -1,6 +1,6 @@
-/* ========== EXTERNAL CSS - BLACK & YELLOW PROFESSIONAL PORTFOLIO ========== */
+/* ========== BLACK & YELLOW PROFESSIONAL PORTFOLIO ========== */
 /* Mehran Khan | Full Stack Developer */
-/* Includes: Hero, About, Skills, Projects, Testimonials, Download CV, Footer */
+/* Fully Responsive: Mobile, Tablet, Laptop, Large Screens */
 
 * {
   margin: 0;
@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -27,9 +27,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #000000;
+  background: rgba(0, 0, 0, 0.96);
   backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.95);
   z-index: 1000;
   border-bottom: 1px solid #f5c518;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -42,6 +41,8 @@ body {
   padding: 1rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .logo a {
@@ -60,6 +61,7 @@ body {
   display: flex;
   gap: 2rem;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -83,11 +85,12 @@ body {
   font-weight: 700;
   font-size: 0.85rem;
   transition: all 0.2s;
+  display: inline-block;
 }
 
 .nav-cta .btn-hire:hover {
   background: #e0b010;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 /* ========== HERO SECTION ========== */
@@ -122,7 +125,7 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: #ffffff;
@@ -329,7 +332,7 @@ body {
   border: 1px solid #333;
 }
 
-/* ========== PROJECTS SECTION (Cards) ========== */
+/* ========== PROJECTS SECTION ========== */
 .projects-section {
   padding: 5rem 0;
   background: #0f0f0f;
@@ -418,7 +421,6 @@ body {
   padding: 2rem;
   border: 1px solid #2a2a2a;
   transition: all 0.3s ease;
-  position: relative;
 }
 
 .testimonial-card:hover {
@@ -464,59 +466,14 @@ body {
   color: #888;
 }
 
-/* ========== DOWNLOAD CV SECTION ========== */
-.download-cv-section {
-  padding: 4rem 0;
-  background: #0f0f0f;
-  text-align: center;
-  border-top: 1px solid #2a2a2a;
-  border-bottom: 1px solid #2a2a2a;
+.review-rating {
+  margin-top: 0.8rem;
 }
 
-.download-card {
-  background: #111111;
-  border: 1px solid #2a2a2a;
-  border-radius: 1.5rem;
-  padding: 3rem 2rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.download-card i {
-  font-size: 3rem;
+.review-rating i {
   color: #f5c518;
-  margin-bottom: 1rem;
-}
-
-.download-card h3 {
-  font-size: 1.8rem;
-  color: #ffffff;
-  margin-bottom: 0.5rem;
-}
-
-.download-card p {
-  color: #a0a0a0;
-  margin-bottom: 2rem;
-}
-
-.btn-download {
-  background: #f5c518;
-  color: #000000;
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  transition: all 0.2s;
-}
-
-.btn-download:hover {
-  background: #e0b010;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(245, 197, 24, 0.3);
+  font-size: 0.8rem;
+  margin-right: 2px;
 }
 
 /* ========== FOOTER ========== */
@@ -551,6 +508,9 @@ body {
 
 .footer-col li {
   margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .footer-col a {
@@ -597,100 +557,145 @@ body {
   color: #6b6b6b;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 992px) {
+/* ========== FULLY RESPONSIVE BREAKPOINTS ========== */
+/* Large Screens (1200px - 1599px) */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
   .hero-content h1 {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
   }
 }
 
+/* Laptop / Tablet Landscape (992px - 1199px) */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 1.8rem;
+  }
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  .hero-grid {
+    gap: 2rem;
+  }
+  .profile-img {
+    width: 240px;
+    height: 240px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Tablet Portrait (768px - 991px) */
 @media (max-width: 768px) {
   .container {
-    padding: 0 1.2rem;
+    padding: 0 1.5rem;
   }
-
   .nav-container {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
+    padding: 0.8rem 1rem;
   }
-
   .nav-links {
-    gap: 1.2rem;
-    flex-wrap: wrap;
+    gap: 1rem;
     justify-content: center;
   }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
+  .hero {
+    padding: 7rem 0 4rem;
   }
-
   .hero-grid {
     flex-direction: column;
     text-align: center;
   }
-
-  .hero-buttons {
-    justify-content: center;
+  .hero-content h1 {
+    font-size: 2.4rem;
   }
-
   .hero-description {
     margin-left: auto;
     margin-right: auto;
   }
-
-  .profile-img {
-    width: 220px;
-    height: 220px;
+  .hero-buttons {
+    justify-content: center;
   }
-
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
   .section-title {
     font-size: 1.8rem;
   }
-
   .skills-grid,
   .projects-grid,
   .testimonials-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-
-  .download-card {
-    padding: 2rem 1.5rem;
+  .skill-card,
+  .project-card {
+    padding: 1.5rem;
   }
-
-  .download-card h3 {
-    font-size: 1.4rem;
-  }
-
   .footer-grid {
     grid-template-columns: 1fr;
     text-align: center;
   }
-
   .social-links {
+    justify-content: center;
+  }
+  .footer-col li {
     justify-content: center;
   }
 }
 
+/* Mobile Devices (480px - 767px) */
 @media (max-width: 480px) {
+  .container {
+    padding: 0 1.2rem;
+  }
   .hero {
     padding: 6rem 0 3rem;
   }
-
   .hero-content h1 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
-
+  .hero-badge {
+    font-size: 0.7rem;
+  }
   .btn-primary,
   .btn-outline {
     padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
-
   .section-title {
     font-size: 1.5rem;
   }
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+  .footer-col h3 {
+    font-size: 1.1rem;
+  }
+}
 
-  .project-card {
-    padding: 1.2rem;
+/* Extra Large Screens (1600px and above) */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1500px;
+  }
+  .hero-content h1 {
+    font-size: 4.2rem;
+  }
+  .profile-img {
+    width: 320px;
+    height: 320px;
+  }
+  .skills-grid,
+  .projects-grid,
+  .testimonials-grid {
+    gap: 2.5rem;
   }
 }

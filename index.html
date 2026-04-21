@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Mehran Khan | Full Stack Developer — Portfolio</title>
+  <title>Mehran Khan</title>
   <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
   <!-- Google Fonts -->
@@ -36,12 +36,12 @@
         <h1>I'm <span class="hero-highlight">Mehran Khan</span><br>Full Stack Developer</h1>
         <p class="hero-description">Building robust, scalable web applications with modern technologies. 3+ years of experience delivering high-performance solutions.</p>
         <div class="hero-buttons">
-          <a href="Mehran_Khan_CV.pdf" class="btn-primary"><i class="fas fa-download"></i> Download CV</a>
+          <a href="#" id="downloadCvBtn" class="btn-primary"><i class="fas fa-download"></i> Download CV</a>
           <a href="#projects" class="btn-outline">View Projects <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="dp.jpeg" alt="Mehran Khan" class="profile-img">
+        <img src="https://placehold.co/400x400/1a1a1a/f5c518?text=MK" alt="Mehran Khan" class="profile-img">
       </div>
     </div>
   </section>
@@ -97,7 +97,7 @@
     </div>
   </section>
 
-  <!-- PROJECTS SECTION - Simple Cards (No role, no checkmarks) -->
+  <!-- PROJECTS SECTION -->
   <section id="projects" class="projects-section">
     <div class="container">
       <div class="section-header">
@@ -106,9 +106,7 @@
         <p class="section-subtitle">Real-world solutions I've built</p>
       </div>
       <div class="projects-grid">
-        
-        <!-- Project 1: Event Management & Catering System -->
-        <div class="project-card simple">
+        <div class="project-card">
           <div class="project-img-icon"><i class="fas fa-calendar-alt"></i></div>
           <h3>Event Management & Catering System</h3>
           <p>A modern web platform for booking halls, catering services, and rental items. Features multi-role dashboards, dynamic booking forms, and real-time API integration.</p>
@@ -116,9 +114,7 @@
             <span>Laravel</span><span>React.js</span><span>Tailwind CSS</span><span>Bootstrap</span><span>HTML5/CSS3</span><span>REST API</span><span>MySQL</span>
           </div>
         </div>
-
-        <!-- Project 2: Real Estate Property Management System -->
-        <div class="project-card simple">
+        <div class="project-card">
           <div class="project-img-icon"><i class="fas fa-building"></i></div>
           <h3>Real Estate Property Management System</h3>
           <p>A full-stack MERN application for buying, selling, and renting properties. Includes property listings, search/filter, user auth, and agent management.</p>
@@ -126,17 +122,14 @@
             <span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Tailwind CSS</span>
           </div>
         </div>
-
-        <!-- Project 3: ECTurbo - Shipping Management Platform (NEW) -->
-        <div class="project-card simple">
+        <div class="project-card">
           <div class="project-img-icon"><i class="fas fa-shipping-fast"></i></div>
           <h3>ECTurbo - Shipping Management Platform</h3>
           <p>A comprehensive shipping management platform for a Saudi Arabian logistics company. Features multi-dashboard architecture, warehouse management system for vendors to manage accounts, warehouses, payments, and shipment operations with real-time tracking.</p>
           <div class="project-tech-stack">
-            <span>Laravel</span><span>My Sql</span>
+            <span>Laravel</span><span>MySQL</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -150,7 +143,6 @@
         <p class="section-subtitle">What people say about my work</p>
       </div>
       <div class="testimonials-grid">
-        
         <div class="testimonial-card">
           <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
           <p class="testimonial-text">"Mehran built an exceptional Event Management System for our business. The UI is intuitive, and the multi-role dashboard works flawlessly. His React skills are top-notch!"</p>
@@ -160,7 +152,6 @@
           </div>
           <div class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
         </div>
-
         <div class="testimonial-card">
           <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
           <p class="testimonial-text">"The Real Estate Property Management System exceeded our expectations. Clean code, fast API responses, and a beautiful frontend. Mehran is a true MERN expert!"</p>
@@ -170,7 +161,6 @@
           </div>
           <div class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
         </div>
-
         <div class="testimonial-card">
           <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
           <p class="testimonial-text">"ECTurbo transformed our logistics operations. The multi-dashboard architecture and real-time tracking are game-changers. Mehran delivered exactly what we needed."</p>
@@ -180,7 +170,6 @@
           </div>
           <div class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
         </div>
-
         <div class="testimonial-card">
           <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
           <p class="testimonial-text">"Working with Mehran was a pleasure. He delivered the Event Management platform on time with all features — booking forms, vendor dashboards, and responsive design. Highly recommend!"</p>
@@ -190,7 +179,6 @@
           </div>
           <div class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
         </div>
-
       </div>
     </div>
   </section>
@@ -218,7 +206,7 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#testimonials">Reviews</a></li>
-          <li><a href="#download">Resume</a></li>
+          <li><a href="#download" id="resumeFooterLink">Resume</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -241,7 +229,7 @@
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
-      if (href === "#" || href === "") return;
+      if (href === "#" || href === "" || href === "#download") return;
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
@@ -250,10 +238,10 @@
     });
   });
 
-  // DOWNLOAD CV FUNCTIONALITY
-  const downloadBtn = document.getElementById('downloadCvBtn');
-  if (downloadBtn) {
-    downloadBtn.addEventListener('click', (e) => {
+  // DOWNLOAD CV FUNCTIONALITY (simulated)
+  const downloadBtns = document.querySelectorAll('#downloadCvBtn, #resumeFooterLink');
+  downloadBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
       // Replace this URL with your actual CV file link
       const cvUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
@@ -264,7 +252,26 @@
       link.click();
       document.body.removeChild(link);
     });
-  }
+  });
+
+  // Active navigation highlight on scroll
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.style.color = '#f0f0f0';
+      if (link.getAttribute('href') === `#${current}`) {
+        link.style.color = '#f5c518';
+      }
+    });
+  });
 </script>
 </body>
 </html>

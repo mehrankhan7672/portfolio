@@ -279,12 +279,22 @@ body {
   border-radius: 1.2rem;
   border: 1px solid #2a2a2a;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
+/* Desktop hover effect */
 .skill-card:hover {
   transform: translateY(-6px);
   border-color: #f5c518;
   box-shadow: 0 12px 30px rgba(245, 197, 24, 0.1);
+}
+
+/* Mobile tap/click effect */
+.skill-card:active {
+  transform: scale(0.98);
+  border-color: #f5c518;
+  background: rgba(245, 197, 24, 0.05);
+  transition: all 0.1s ease;
 }
 
 .skill-icon {
@@ -350,12 +360,22 @@ body {
   padding: 1.8rem;
   border: 1px solid #2a2a2a;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
+/* Desktop hover effect */
 .project-card:hover {
   transform: translateY(-6px);
   border-color: #f5c518;
   box-shadow: 0 12px 25px rgba(245, 197, 24, 0.08);
+}
+
+/* Mobile tap/click effect */
+.project-card:active {
+  transform: scale(0.98);
+  border-color: #f5c518;
+  background: rgba(245, 197, 24, 0.05);
+  transition: all 0.1s ease;
 }
 
 .project-img-icon {
@@ -421,10 +441,21 @@ body {
   padding: 2rem;
   border: 1px solid #2a2a2a;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
+/* Desktop hover effect */
 .testimonial-card:hover {
   border-color: #f5c518;
+  transform: translateY(-4px);
+}
+
+/* Mobile tap/click effect */
+.testimonial-card:active {
+  transform: scale(0.98);
+  border-color: #f5c518;
+  background: rgba(245, 197, 24, 0.05);
+  transition: all 0.1s ease;
 }
 
 .quote-icon i {
@@ -474,6 +505,66 @@ body {
   color: #f5c518;
   font-size: 0.8rem;
   margin-right: 2px;
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact-section {
+  padding: 5rem 0;
+  background: #0f0f0f;
+  border-top: 1px solid #2a2a2a;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.contact-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-info-card {
+  background: #111111;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  border: 1px solid #2a2a2a;
+  transition: all 0.3s ease;
+}
+
+.contact-info-card:hover {
+  border-color: #f5c518;
+  transform: translateY(-5px);
+}
+
+.contact-info-card:active {
+  transform: scale(0.98);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-item i {
+  font-size: 1.8rem;
+  color: #f5c518;
+  width: 50px;
+  text-align: center;
+}
+
+.contact-item h4 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.contact-item p {
+  color: #b0b0b0;
+  font-size: 0.9rem;
 }
 
 /* ========== FOOTER ========== */
@@ -557,7 +648,52 @@ body {
   color: #6b6b6b;
 }
 
-/* ========== FULLY RESPONSIVE BREAKPOINTS ========== */
+/* ========== MOBILE TOUCH ENHANCEMENTS ========== */
+/* Remove tap highlight on mobile */
+.skill-card,
+.project-card,
+.testimonial-card,
+.btn-primary,
+.btn-outline,
+.btn-hire,
+.social-links a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Add ripple effect for mobile */
+@media (max-width: 768px) {
+  .skill-card:active,
+  .project-card:active,
+  .testimonial-card:active {
+    animation: cardTap 0.2s ease;
+  }
+
+  @keyframes cardTap {
+    0% {
+      transform: scale(1);
+      border-color: #2a2a2a;
+    }
+    50% {
+      transform: scale(0.97);
+      border-color: #f5c518;
+      background: rgba(245, 197, 24, 0.1);
+    }
+    100% {
+      transform: scale(1);
+      border-color: #2a2a2a;
+    }
+  }
+
+  /* Improve button tap feedback */
+  .btn-primary:active,
+  .btn-outline:active,
+  .btn-hire:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease;
+  }
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
 /* Large Screens (1200px - 1599px) */
 @media (max-width: 1200px) {
   .container {
@@ -645,6 +781,13 @@ body {
   }
   .footer-col li {
     justify-content: center;
+  }
+  .contact-item {
+    gap: 1rem;
+  }
+  .contact-item i {
+    font-size: 1.5rem;
+    width: 40px;
   }
 }
 
